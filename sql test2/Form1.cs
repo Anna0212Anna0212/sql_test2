@@ -28,5 +28,11 @@ namespace sql_test2
             tableTableAdapter.Insert(textBox1.Text, textBox2.Text, comboBox1.Text, textBox3.Text);
             this.tableTableAdapter.Fill(this.database1DataSet.Table);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            this.tableTableAdapter.Fill(this.database1DataSet.Table);
+        }
     }
 }
